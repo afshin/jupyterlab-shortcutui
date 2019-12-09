@@ -199,9 +199,8 @@ export class ShortcutInput extends React.Component<
   };
 
   /**
-   * Check if shorcut being typed will work
-   * (does not end with ctrl, alt, command, or shift)
-   * */
+   * Verify that the shortcut does not end with ctrl, alt, command, or shift).
+   */
   checkNonFunctional = (shortcut: string): boolean => {
     const dontEnd = ['Ctrl', 'Alt', 'Accel', 'Shift'];
     const shortcutKeys = this.state.currentChain.split(' ');
